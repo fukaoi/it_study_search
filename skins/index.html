@@ -1,0 +1,20 @@
+<% extends ./base.html %>
+
+<% subskin content %>
+<div id="header"><h1><% title %></h1></div>
+<div id="body">
+<p id="message"><% errorMessage %></p>
+<h3><% headMessage %></h3>
+<form action="/confirm" method="post">
+<p><input type="text" name="email" value="" size="50">&nbsp;&nbsp;：&nbsp;&nbsp;<input type="text" name="keyword" value="" size="50"></p>
+<p>メールアドレス&nbsp;&nbsp;：&nbsp;&nbsp;検索キーワード</p>
+<input type="submit" name="submit" value="送信">
+</form>
+<br />
+<br />
+<p>検索方法：</p>
+<p>
+検索キーワードをスペース区切りで入力する事により、<br />
+AND検索になります。今のところOR検索はできません。
+</p>
+</div>
